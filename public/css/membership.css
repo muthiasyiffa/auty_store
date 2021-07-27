@@ -1,0 +1,373 @@
+@charset "utf-8";
+@import url("fontawesome-free/css/fontawesome-all.min.css");
+@import url("framework.css");
+@font-face 
+{
+  font-family: "Font Amalfi";
+  src: url('Amalfi Coast.TTF');
+}
+
+h1{
+	font-family: "Font Amalfi";
+}
+h6{
+	font-family: "Font Amalfi";
+}
+
+/* Rows
+--------------------------------------------------------------------------------------------------------------- */
+.row0{padding:80px 0 0 0;}
+.row1, .row1 a{}
+.row2, .row2 a{}
+.row3, .row3 a{}
+.row4, .row4 a{}
+.row5, .row5 a{}
+
+
+/* Top Bar
+--------------------------------------------------------------------------------------------------------------- */
+#topbar{padding:15px 0; font-size:.8rem; text-transform:uppercase;}
+
+#topbar *{margin:0;}
+#topbar ul li{display:inline-block; margin-right:15px;}
+#topbar ul li:last-child{margin-right:0; padding-right:0; border-right:none;}
+#topbar i{line-height:normal;}
+#topbar > div:first-of-type ul li i{margin-right:5px;}
+
+
+/* Header
+--------------------------------------------------------------------------------------------------------------- */
+#header{padding:0 15px; border:solid; border-width:1px 0;}
+
+#header #logo{margin:28px 0 0 0;}
+#header #logo h1{margin:0; padding:0; font-size:22px; line-height:1;}
+
+
+/* Page Intro
+--------------------------------------------------------------------------------------------------------------- */
+#pageintro{padding:150px 0;}
+
+#pageintro article{display:block; max-width:60%; margin:0 auto;}
+#pageintro .heading{margin-bottom:20px; font-size:4rem;}
+#pageintro p{max-width:75%; margin:0 auto;}
+#pageintro footer{margin-top:50px;}
+
+
+
+/* Footer
+--------------------------------------------------------------------------------------------------------------- */
+#footer{padding:80px 0;}
+
+#footer > div:first-of-type .heading{margin-bottom:20px; font-family: "Font Amalfi"; font-size:1.8rem;}
+#footer .heading{margin-bottom:50px;}
+
+#footer .linklist li{display:block; margin-bottom:15px; padding:0 0 15px 0; border-bottom:1px solid;}
+#footer .linklist li:last-child{margin:0; padding:0; border:none;}
+#footer .linklist li::before, #footer .linklist li::after{display:table; content:"";}
+#footer .linklist li, #footer .linklist li::after{clear:both;}
+
+#footer .contact{}
+#footer .contact.linklist li, #footer .contact.linklist li:last-child{position:relative; padding-left:40px;}
+#footer .contact li *{margin:0; padding:0; line-height:1.6;}
+#footer .contact li i{display:block; position:absolute; top:0; left:0; width:30px; font-size:16px; text-align:center;}
+
+#footer input, #footer button{border:1px solid;}
+#footer input{display:block; width:100%; padding:8px;}
+#footer button{padding:8px 18px 10px; text-transform:uppercase; font-weight:400; cursor:pointer;}
+
+#footer .latestimg{}
+#footer .latestimg > li{display:inline-block; float:left; width:30%; margin:0 0 5% 5%;}
+#footer .latestimg > li:nth-last-child(-n+3){margin-bottom:0;}/* Removes bottom margin from the last three items - margin is restored in the media queries when items stack */
+#footer .latestimg > li:nth-child(3n+1){margin-left:0; clear:left;}/* Removes the need to add class="first" */
+#footer .latestimg > li img{width:100%;}/* Force the image to resize to take the full space - may have to be changed for tablets, depends on personal preference */
+#footer .latestimg > li a.imgover{display:block;}
+
+
+/* Copyright
+--------------------------------------------------------------------------------------------------------------- */
+#copyright{padding:20px 0;}
+#copyright *{margin:0; padding:0;}
+
+
+/* Transition Fade
+--------------------------------------------------------------------------------------------------------------- */
+*, *::before, *::after{transition:all .3s ease-in-out;}
+#mainav form *{transition:none !important;}
+
+
+/* Navigation
+--------------------------------------------------------------------------------------------------------------- */
+nav ul, nav ol{margin:0; padding:0; list-style:none;}
+
+#mainav, #breadcrumb, .sidebar nav{line-height:normal;}
+#mainav .drop::after, #mainav li li .drop::after, #breadcrumb li a::after, .sidebar nav a::after{position:absolute; font-family:"Font Awesome\ 5 Free"; font-weight:900; font-size:10px; line-height:10px;}
+
+/* Top Navigation */
+#mainav{}
+#mainav ul{text-transform:uppercase;}
+#mainav ul ul{position:absolute; width:180px; text-transform:none; z-index:9999;}
+#mainav ul ul ul{left:180px; top:0;}
+#mainav li{display:inline-block; position:relative; margin:0 15px 0 0; padding:0;}
+#mainav li:last-child{margin-right:0;}
+#mainav li li{width:100%; margin:0;}
+#mainav li a{display:block; padding:30px 0;}
+#mainav li li a{border:solid; border-width:0 0 1px 0;}
+#mainav .drop{padding-left:15px;}
+#mainav li li a, #mainav li li .drop{display:block; margin:0; padding:10px 15px;}
+#mainav .drop::after, #mainav li li .drop::after{content:"\f0d7";}
+#mainav .drop::after{top:35px; left:5px;}
+#mainav li li .drop::after{top:15px; left:5px;}
+#mainav ul ul{visibility:hidden; opacity:0;}
+#mainav ul li:hover > ul{visibility:visible; opacity:1;}
+
+#mainav form{display:none; margin:0; padding:0;}
+#mainav form select, #mainav form select option{display:block; cursor:pointer; outline:none;}
+#mainav form select{width:100%; padding:5px; border:none;}
+#mainav form select option{margin:5px; padding:0; border:none;}
+
+
+/* Back to Top */
+#backtotop{z-index:999; display:inline-block; position:fixed; visibility:hidden; bottom:20px; right:20px; width:36px; height:36px; line-height:36px; font-size:16px; text-align:center; opacity:.2;}
+#backtotop i{display:block; width:100%; height:100%; line-height:inherit;}
+#backtotop.visible{visibility:visible; opacity:.5;}
+#backtotop:hover{opacity:1;}
+
+
+/* Colours
+--------------------------------------------------------------------------------------------------------------- */
+a{color:#DC8E47;}
+
+.overlay{color:#FFFFFF; background-color:inherit;}
+.overlay::after{background-color:rgba(0,0,0,.55);}
+
+.btn, .btn.inverse:hover{color:#FFFFFF; background-color:#DC8E47; border-color:#DC8E47;}
+.btn:hover, .btn.inverse{color:inherit; background-color:transparent; border-color:inherit;}
+
+
+/* Rows */
+.row0, .row0 a{color:#FFFFFF;}
+.row1, .row1 a{}
+.row4{color:#C1C2C4; background-color:#1A1914;}
+.row5, .row5 a{color:#C1C2C4; background-color:#292929;}
+
+
+/* Top Bar */
+#topbar ul li:first-child a{color:#DC8E47;}
+
+
+/* Header */
+#header{border-color:rgba(255,255,255,.2);}
+#header #logo h1 a{color:inherit;}
+
+
+/* Page Intro */
+#pageintro{color:#FFFFFF;}
+
+
+/* Footer */
+#footer .heading{color:#FFFFFF;}
+#footer hr, #footer .borderedbox, #footer .linklist li{border-color:rgba(255,255,255,.1);}
+
+#footer input, #footer button{border-color:transparent;}
+#footer input{color:#FFFFFF; background-color:#292929;}
+#footer input:focus{border-color:#DC8E47;}
+#footer button{color:#FFFFFF; background-color:#DC8E47;}
+#footer button:hover{color:inherit; background-color:transparent; border-color:inherit;}
+
+
+/* Navigation */
+#mainav{}
+#mainav li a{color:inherit;}
+#mainav .active a, #mainav a:hover, #mainav li:hover > a{color:#DC8E47; background-color:inherit;}
+#mainav li li a, #mainav .active li a{color:#FFFFFF; background-color:rgba(220,142,71,.5);/* #DC8E47 */ border-color:rgba(0,0,0,.6);}
+#mainav li li:hover > a, #mainav .active .active > a{color:inherit; background-color:#DC8E47;}
+#mainav form select{color:#474747; background-color:#FFFFFF;}
+
+#backtotop{color:#FFFFFF; background-color:#DC8E47;}
+
+/* Media Queries
+--------------------------------------------------------------------------------------------------------------- */
+@-ms-viewport{width:device-width;}
+
+
+/* Max Wrapper Width - Laptop, Desktop etc.
+--------------------------------------------------------------------------------------------------------------- */
+@media screen and (min-width:1140px){
+	.hoc{max-width:1140px;}
+}
+
+@media screen and (min-width:978px) and (max-width:1140px){
+	.hoc{max-width:95%;}
+}
+
+
+/* Mobile Devices
+--------------------------------------------------------------------------------------------------------------- */
+@media screen and (max-width:978px){
+	.hoc{max-width:90%;}
+
+	#topbar{}
+
+	#header{padding:30px 15px;}
+	#header #logo{margin-top:3px;}
+
+	#mainav{}
+	#mainav ul{display:none;}
+	#mainav form{display:block;}
+
+	#footer{}
+
+	#copyright{}
+	#copyright p:first-of-type{margin-bottom:10px;}
+}
+
+@media screen and (max-width:750px){
+	.imgl, .imgr{display:inline-block; float:none; margin:0 0 10px 0;}
+	.fl_left, .fl_right{display:block; float:none;}
+	.group .group > *:last-child, .clear .clear > *:last-child, .clear .group > *:last-child, .group .clear > *:last-child{margin-bottom:0;}/* Experimental - Needs more testing in different situations, stops double margin when stacking */
+	.one_half, .one_third, .two_third, .one_quarter, .two_quarter, .three_quarter, #segment > .two_third{display:block; float:none; width:auto; margin:0 0 30px 0;}
+
+	#topbar{padding-top:15px; text-align:center;}
+	#topbar > div:first-of-type ul{margin:0 0 15px 0;}
+
+	#header{padding:30px 0; text-align:center;}
+	#header #logo{margin:0 0 20px 0;}
+
+	#pageintro article, #pageintro p{max-width:none; margin:auto;}
+	#pageintro .heading{font-size:2rem;}
+
+	.sectiontitle{max-width:none; margin-bottom:50px; text-align:left;}
+	.overview > li:nth-last-child(-n+4){margin-bottom:50px;}
+
+	#footer > div{text-align:left;}
+	#footer .latestimg > li, #footer .latestimg > li:nth-last-child(-n+3){display:inline-block; float:none; width:auto; margin:0 5% 5% 0;}
+	#footer .latestimg > li:last-child{margin-bottom:0;}
+	#footer .latestimg > li img{width:auto;}
+}
+
+@media screen and (max-width:450px){
+	#topbar > div:first-of-type ul li{display:block; margin:0 0 2px 0;}
+}
+
+
+/* Other
+--------------------------------------------------------------------------------------------------------------- */
+@media screen and (max-width:650px){
+	.scrollable{display:block; width:100%; margin:0 0 30px 0; padding:0 0 15px 0; overflow:auto; overflow-x:scroll;}
+	.scrollable table{margin:0; padding:0; white-space:nowrap;}
+
+	.inline li{display:block; margin-bottom:10px;}
+	.pushright li{margin-right:0;}
+
+	.font-x2{font-size:1.6rem;}
+	.font-x3{font-size:1.8rem;}
+}
+
+.clear {
+  clear:both;
+}
+
+.ticketHolder {
+  display: block;
+  margin: 10px auto;
+  float: left;
+  width: 33%;
+  height: 100px;
+}
+section.couponContainer {
+  min-width:740px;
+  clear: both;
+}
+
+.coupon {
+  margin:0 auto;
+  max-width: 180px;
+  padding: 20px 0;
+  border: 2px solid #DC8E47;
+  border-width: 1px 0;
+  position:relative;
+  background: #DC8E47;
+  
+  transition:All 0.2549s ease;
+  -webkit-transition:All 0.2549s ease;
+  -moz-transition:All 0.2549s ease;
+  -o-transition:All 0.2549s ease;
+  
+}
+.coupon:hover {
+  box-shadow: 0 0 15px #555;
+  transform: rotate(360deg) scale(1.1);
+  -webkit-transform: rotate(360deg) scale(1.1);
+  -moz-transform: rotate(360deg) scale(1.1);
+  -o-transform: rotate(360deg) scale(1.1);
+  -ms-transform: rotate(360deg) scale(1.1);
+}
+.coupon .inner{
+  font-family: 'Roboto', sans-serif;
+  position: relative;
+  padding: 0px 40px;
+  margin: 0 -20px;
+  background: #DC8E47;
+  border: 2px solid #DC8E47;
+  border-width: 0 1px;
+}
+.coupon .inner div {
+  color:#efefef;
+  font-size: 1.1em;
+  margin: 0;
+  text-align:center;
+}
+.savings {
+  font-size:1.8em!important;
+  padding: 8px 0;
+}
+.coupon .inner div.couponCode {
+  font-size:2em;
+  color:#fff;
+  line-height: 1em;
+}
+.coupon:before, .coupon:after,
+.coupon .inner:before, .coupon .inner:after {
+  box-sizing: border-box;
+  content:'';
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  border: 20px solid #DC8E47;
+  border-radius: 50%;
+  background: transparent;
+  box-shadow: inset 0 0 0 2px #DC8E47;
+}
+.coupon:before{
+  top: -40px;
+  left: -60px;
+  clip: rect(40px, auto, auto, 40px); /* CSS 2.1 way - deprecated */
+  -webkit-clip-path: rectangle(50%, 50%, 100%, 100%, 0, 0); /* CSS 3 */
+}
+.coupon:after{
+  top: -40px;
+  right: -59px;
+  clip: rect(40px, 40px, auto, auto);
+  -webkit-clip-path: rectangle(0, 50%, 50%, 100%, 0, 0);
+}
+.coupon .inner:before {
+  bottom: -60px;
+  left: -40px;
+  clip: rect(auto, auto, 40px, 40px);
+  -webkit-clip-path: rectangle(50%, 0, 100%, 50%, 0, 0);
+}
+.coupon .inner:after {
+  bottom: -60px;
+  right: -40px;
+  clip: rect(auto, 40px, 40px, auto);
+  -webkit-clip-path: rectangle(0, 0, 50%, 50%, 0, 0);
+}
+.reveal {
+  display:none;
+}
+.coupon:hover .reveal {
+  display:block;
+}
+.coupon:hover .savings {
+  display:none;
+}

@@ -1,0 +1,52 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Login/SignUp</title>
+    <link rel="stylesheet" href="css/login.css">
+
+</head>
+
+<body>
+    <!-- partial:index.partial.html -->
+
+    <div class="form-structor">
+        <form action="/register" method="POST">
+            <div class="signup">
+                <h2 class="form-title" id="signup"><span>or</span>Sign up</h2>
+                <div class="form-holder">
+                    <input type="text" name="name" class="input" placeholder="Name" />
+                    <input type="email" name="email" class="input" placeholder="Email" />
+                    <input type="password" name="password" class="input" placeholder="Password" />
+                </div>
+                <button class="submit-btn">Sign up</button>
+                <% if (msg.length !== 0) { %>
+                    <div>
+                        <small style="color: white; text-align: center;">
+                            <%- msg %> 
+                        </small>
+                    </div>
+                    <br><br>
+                <% } %>
+            </div>
+        </form>
+
+        <form action="/login" method="POST">
+            <div class="login slide-up">
+                <div class="center">
+                    <h2 class="form-title" id="login"><span>or</span>Log in</h2>
+                    <div class="form-holder">
+                        <input type="email" name="email" class="input" placeholder="Email" />
+                        <input type="password" name="password" class="input" placeholder="Password" />
+                    </div>
+                    <button class="submit-btn">Log in</button>
+                </div>  
+            </div>
+        </form>
+    </div>
+    <!-- partial -->
+    <script src="js/login.js"></script>
+
+</body>
+
+</html>

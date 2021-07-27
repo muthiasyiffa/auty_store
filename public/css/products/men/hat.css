@@ -1,0 +1,320 @@
+/* Primary Styles */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Oswald";
+  font-size: 1em;
+  color: #333;
+}
+
+h1 {
+  font-size: 30px;
+  letter-spacing: 5px;
+}
+
+em {
+  font-style: normal;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Layout */
+.s-layout {
+  display: flex;
+  width: 100%;
+  min-height: 100vh;
+}
+
+.s-layout__content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+}
+
+/* Sidebar */
+
+.s-sidebar__nav {
+  position: fixed;
+  top: 0;
+  left: -15em;
+  overflow: hidden;
+  transition: all 0.3s ease-in;
+  width: 15em;
+  height: 100%;
+  background-image: url(/css/men.jpg);
+}
+
+.s-sidebar__nav:hover,
+.s-sidebar__nav:focus,
+.s-sidebar__trigger:focus + .s-sidebar__nav,
+.s-sidebar__trigger:hover + .s-sidebar__nav {
+  left: 0;
+}
+
+.s-sidebar__nav ul {
+  position: absolute;
+  top: 150px;
+  left: 0;
+  margin: 0;
+  padding: 0;
+  width: 15em;
+}
+
+.s-sidebar__nav ul li {
+  width: 100%;
+}
+
+.s-sidebar__nav-link {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  height: 4em;
+}
+
+.s-sidebar__nav-link em {
+  position: absolute;
+  top: 50%;
+  left: 4em;
+  transform: translateY(-50%);
+}
+
+.s-sidebar__nav-link:hover {
+  background: #fff;
+}
+
+.s-sidebar__nav .active {
+  background: #fff;
+}
+
+.s-sidebar__nav-link > i {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: inline-block;
+  width: 4em;
+  height: 4em;
+}
+
+.s-sidebar__nav-link > i::before {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* Mobile First */
+@media (min-width: 42em) {
+  .s-layout__content {
+    margin-left: 4em;
+  }
+
+  /* Sidebar */
+  .s-sidebar__trigger {
+    width: 4em;
+  }
+
+  .s-sidebar__nav {
+    width: 4em;
+    left: 0;
+  }
+
+  .s-sidebar__nav:hover,
+  .s-sidebar__nav:focus,
+  .s-sidebar__trigger:hover + .s-sidebar__nav,
+  .s-sidebar__trigger:focus + .s-sidebar__nav {
+    width: 15em;
+  }
+}
+
+@media (min-width: 68em) {
+  .s-layout__content {
+    margin-left: 15em;
+  }
+
+  /* Sidebar */
+  .s-sidebar__trigger {
+    display: none;
+  }
+
+  .s-sidebar__nav {
+    width: 15em;
+  }
+
+  .s-sidebar__nav ul {
+    top: 1.3em;
+  }
+}
+
+#rig {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0;
+  font-size: 0;
+  list-style: none;
+  background-color: none;
+}
+#rig li {
+  display: inline-block;
+  *display: inline;
+  width: 25%;
+  vertical-align: middle;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.rig-cell {
+  margin: 20px;
+  border-radius: 5px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.4);
+  padding: 16px;
+  border: none;
+  color: #555;
+  background-color: white;
+  text-decoration: none;
+  text-align: center;
+  display: block;
+  position: relative;
+  overflow: hidden;
+}
+
+.rig-cell h3 {
+  font-size: 18px;
+  font-family: "Oswald", sans-serif;
+  font-weight: normal;
+}
+
+.rig-img1 {
+  display: block;
+  border: none;
+  width: 100%;
+  height: 0;
+  padding-top: 83.461538%;
+  background-size: cover;
+  background-color: white;
+  background-image: url("/images/men/images/men/topi/1.jpeg");
+  background-repeat: no-repeat;
+}
+.rig-img2 {
+  display: block;
+  border: none;
+  width: 100%;
+  height: 0;
+  padding-top: 83.461538%;
+  background-size: cover;
+  background-color: white;
+  background-image: url("/images/men/images/men/topi/3.jpeg");
+  background-repeat: no-repeat;
+}
+.rig-img3 {
+  display: block;
+  border: none;
+  width: 100%;
+  height: 0;
+  padding-top: 83.461538%;
+  background-size: cover;
+  background-color: white;
+  background-image: url("/images/men/images/men/topi/2.jpeg");
+  background-repeat: no-repeat;
+}
+.rig-img4 {
+  display: block;
+  border: none;
+  width: 100%;
+  height: 0;
+  padding-top: 83.461538%;
+  background-size: cover;
+  background-color: white;
+  background-image: url("/images/men/images/men/topi/4.jpg");
+  background-repeat: no-repeat;
+}
+.rig-img5 {
+  display: block;
+  border: none;
+  width: 100%;
+  height: 0;
+  padding-top: 83.461538%;
+  background-size: cover;
+  background-color: white;
+  background-image: url("/images/men/images/men/topi/5.jpg");
+  background-repeat: no-repeat;
+}
+.rig-img6 {
+  display: block;
+  border: none;
+  width: 100%;
+  height: 0;
+  padding-top: 83.461538%;
+  background-size: cover;
+  background-color: white;
+  background-image: url("/images/men/images/men/topi/6.jpg");
+  background-repeat: no-repeat;
+}
+.rig-img7 {
+  display: block;
+  border: none;
+  width: 100%;
+  height: 0;
+  padding-top: 83.461538%;
+  background-size: cover;
+  background-color: white;
+  background-image: url("/images/men/images/men/topi/7.jpg");
+  background-repeat: no-repeat;
+}
+.rig-img8 {
+  display: block;
+  border: none;
+  width: 100%;
+  height: 0;
+  padding-top: 83.461538%;
+  background-size: cover;
+  background-color: white;
+  background-image: url("/images/men/images/men/topi/8.jpg");
+  background-repeat: no-repeat;
+}
+.rig-overlay {
+  position: absolute;
+  display: block;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  margin: auto;
+  background: white;
+  background-size: 50px 50px;
+  opacity: 0;
+  filter: alpha(opacity=0);
+  transition: all 0.3s;
+}
+#rig li:hover .rig-overlay {
+  opacity: 0.5;
+}
+
+@media (max-width: 9000px) {
+  #rig li {
+    width: 25%;
+  }
+}
+@media (max-width: 800px) {
+  #rig li {
+    width: 33.33%;
+  }
+}
+@media (max-width: 500px) {
+  #rig li {
+    width: 50%;
+  }
+}
+@media (max-width: 350px) {
+  #rig li {
+    width: 100%;
+  }
+}

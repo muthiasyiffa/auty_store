@@ -1,0 +1,142 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-image: url("/images/testi/bg.jpeg");
+}
+
+.testimonial-carousel {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.testimonials-wrapper {
+  width: 95%;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.testimonials-wrapper h4 {
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 23px;
+  position: relative;
+  padding: 30px;
+  color: #000;
+  border-radius: 5px;
+  background: #fff;
+  box-shadow: 5px 5px 5px 0 rgba(23, 23, 25, 0.3);
+}
+
+.testimonials-blob,
+.testimonials-img {
+  border-radius: 100%;
+}
+
+.testimonials-img {
+  position: relative;
+  left: 50%;
+  overflow: hidden !important;
+  width: 100px;
+  height: 100px;
+  margin-bottom: 30px;
+  margin-left: -40px;
+  box-shadow: 0 0 0 5px #171719;
+  filter: brightness(2);
+}
+
+.testimonial-carousel .active .testimonials-img {
+  transform: translateY(0);
+  filter: brightness(1);
+}
+
+.testimonials-person-info {
+  text-align: center;
+  color: #fff;
+}
+
+.testimonials-blob {
+  position: relative;
+  left: 80%;
+  width: 3px;
+  height: 3px;
+  transform: rotate(45deg);
+}
+
+@keyframes anim {
+  0% {
+    opacity: 0;
+    box-shadow: 0 0 0 0 #fff, 0 0 0 0 #fff;
+  }
+  50% {
+    box-shadow: 0 15px 0 0 #fff, 0 0 0 0 #fff;
+  }
+  100% {
+    opacity: 1;
+    background: #fff;
+    box-shadow: 0 15px 0 4px #fff, 0 35px 0 6px #fff;
+  }
+}
+
+.Autytestimonial.active-blob {
+  transform-origin: 50% 50%;
+  animation: anim linear 0.5s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+.Autytestimonial {
+  overflow: hidden;
+  cursor: grab;
+}
+
+.Autytestimonial:active {
+  cursor: grabbing;
+}
+
+.Autytestimonial-item {
+  overflow: hidden;
+  transition: all ease-out 0.3s;
+  transform: scale(0.7);
+  opacity: 0;
+}
+
+.Autytestimonial.active {
+  transform: scale(1);
+  opacity: 1;
+}
+
+.Autytestimonial,
+.Autytestimonial-prev {
+  font-size: 13px;
+  line-height: 35px;
+  position: absolute;
+  top: 50%;
+  padding: 0 10px;
+  transition: all ease-out 0.25s;
+  transform: translateY(-100%);
+  opacity: 1;
+  color: #fff;
+  border-radius: 3px;
+  background: #171719;
+}
+
+.Autytestimonial-next:hover,
+.Autytestimonial-prev:hover {
+  color: #fff;
+  background: #615e6b;
+}
+
+.Autytestimonial-prev {
+  left: 0;
+}
+
+.Autytestimonial.owl-next {
+  right: 0;
+}
+
+.Autytestimonial-next.disabled,
+.Autytestimonial-prev.disabled {
+  opacity: 0;
+}
+
+/* Resources1× 0.5× 0.25×Rerun */
