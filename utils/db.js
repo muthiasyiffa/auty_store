@@ -1,6 +1,6 @@
 const mongoose = require('mongoose')
 
-mongoose.connect('mongodb://127.0.0.1:27017/auty_store', 
+mongoose.connect('mongodb+srv://muthiasyiffa:apayalupagua@cluster0.n0zvz.mongodb.net/autystore', 
 {
     useNewUrlParser: true,
     useUnifiedTopology: true,
