@@ -4,7 +4,6 @@ const app = express()
 const expressLayout = require('express-ejs-layouts')
 const session = require('express-session')
 const flash = require('connect-flash')
-const port = 3000
 
 require('./utils/db')
 const auth = require('./models/Auth')
@@ -156,6 +155,6 @@ app.get('/testi', (req, res) => {
     res.render('testi', {layout : false})
 })
 
-app.listen(port, () => {
+app.listen(process.env.PORT || 8080, () => {
     console.log(`Server is Running at http://localhost:${port}`)
 })
